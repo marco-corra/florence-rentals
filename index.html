@@ -1,1 +1,49 @@
 <!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milligan & Milligan - Gestione Affitti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="container-centrato">
+        <div class="sezione-immagini">
+            <img src="img/logo-milligan.jpeg" class="img1" alt="Immagine 1">
+            <img src="img/logo-unyca.png" alt="Immagine 2">
+        </div>
+
+        <div class="sezione-testo">
+            <p><b>"Milligan & Milligan - Gestione Affitti”</b> è ora parte di <b>Unyca-Ream Gestione Patrimonio
+                    Fondiario, Gruppo RBS & Partners</b>.</p><br>
+            <p>Sarai rindirizzato al sito di Unyca-Ream tra pochi secondi.</p><br>
+            <p>Se non vieni rindirizzato automaticamente, pioi farlo cliccando sul pulsante qui sotto.</p>
+        </div>
+
+        <div class="sezione-bottone">
+            <p>Verrai reindirizzato tra <span id="countdown">15</span> secondi.</p>
+            <a href="https://www.unyca-ream.it/" class="btn">Vai al sito di Unyca</a>
+        </div>
+    </section>
+
+    <script>
+        let count = 15;
+        const countdownEl = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            count--;
+            countdownEl.textContent = count;
+
+            if (count <= 0) {
+                clearInterval(timer);
+                window.location.href = "https://www.unyca-ream.it/";
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
